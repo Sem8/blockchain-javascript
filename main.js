@@ -34,3 +34,9 @@ class BlockChain {
         this.chain.push(newBlock);
     }
 }
+
+let semCoin = new BlockChain();
+semCoin.addBlock(new Block(1, '10/107/2017', { amount: 4 }));
+semCoin.addBlock(new Block(2, '12/07/2017', { amount: 10 }));
+
+console.log(JSON.stringify(semCoin, null, 4));

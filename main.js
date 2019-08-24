@@ -13,3 +13,13 @@ class Block {
         return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data)).toString();
     }
 }
+
+class BlockChain {
+    constructor() {
+        this.chain = [];
+    }
+
+    createGenesisBlock() {
+        return new Block(0, '01/01/2017', 'Genesis block', '0');
+    }
+}

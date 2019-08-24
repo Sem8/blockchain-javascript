@@ -59,6 +59,7 @@ semCoin.addBlock(new Block(2, '12/07/2017', { amount: 10 }));
 console.log('is blockchain valid? ' + semCoin.isChainValid());
 
 semCoin.chain[1].data = { amount: 100 };
+semCoin.chain[1].hash = semCoin.chain[1].calculateHash();
 
 console.log('is blockchain valid? ' + semCoin.isChainValid());
 

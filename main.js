@@ -56,4 +56,10 @@ let semCoin = new BlockChain();
 semCoin.addBlock(new Block(1, '10/107/2017', { amount: 4 }));
 semCoin.addBlock(new Block(2, '12/07/2017', { amount: 10 }));
 
-console.log(JSON.stringify(semCoin, null, 4));
+console.log('is blockchain valid? ' + semCoin.isChainValid());
+
+semCoin.chain[1].data = { amount: 100 };
+
+console.log('is blockchain valid? ' + semCoin.isChainValid());
+
+// console.log(JSON.stringify(semCoin, null, 4));
